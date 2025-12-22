@@ -45,13 +45,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            aspect-ratio: 9 / 16;
+            position: relative;
+        }
+        video, .thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
         }
         video {
-            height: auto;
-            width: 100%;
-            display: block;
-            object-fit: contain;
-            cursor: pointer;
+            display: none;
         }
         .info-section {
             padding: 15px;
@@ -574,10 +581,13 @@
         // 渲染函数
         function renderVideos(data) {
             mainTitle.innerText = `KlingO1 运镜合集 (共 ${data.length} 个)`;
-            videoGrid.innerHTML = data.map(item => `
+            videoGrid.innerHTML = data.map(item => {
+                const thumbSrc = item.video_src.replace('/720p/', '/thumbnails/').replace('.mp4', '.jpg');
+                return `
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <video src="${item.video_src}" loop muted playsinline></video>
+                        <img src="${thumbSrc}" class="thumbnail" alt="${item.en_title}">
+                        <video src="${item.video_src}" loop muted playsinline preload="none"></video>
                     </div>
                     <div class="info-section">
                         <div class="meta-info">
@@ -593,15 +603,23 @@
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
 
             // 绑定播放逻辑
-            document.querySelectorAll('video').forEach(video => {
-                video.addEventListener('mouseenter', () => {
+            document.querySelectorAll('.video-card').forEach(card => {
+                const video = card.querySelector('video');
+                const thumb = card.querySelector('.thumbnail');
+                
+                card.addEventListener('mouseenter', () => {
+                    video.style.display = 'block';
+                    thumb.style.display = 'none';
                     video.play();
                 });
-                video.addEventListener('mouseleave', () => {
+                
+                card.addEventListener('mouseleave', () => {
                     video.pause();
+                    video.style.display = 'none';
+                    thumb.style.display = 'block';
                 });
             });
         }
