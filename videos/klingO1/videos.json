@@ -448,5 +448,77 @@
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
+    },
+    {
+        "zh_title": "升降运镜",
+        "en_title": "Crane Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_Crane_Shot.mp4",
+        "prompt": "Crane Shot shot: 镜头从低处垂直向上升起，展现宏大的城市景观，带来开阔的视觉冲击，强调场景的规模感。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "推镜头",
+        "en_title": "Dolly In",
+        "video_src": "videos/klingO1/720p/KlingO1_Dolly_In.mp4",
+        "prompt": "Dolly In shot: 摄像机沿轨道缓慢向前推进，增强画面的纵深感与立体感，引导观众视线自然聚焦于主体。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "斯坦尼康跟拍",
+        "en_title": "Steadicam Tracking",
+        "video_src": "videos/klingO1/720p/KlingO1_Steadicam_Tracking.mp4",
+        "prompt": "Steadicam Tracking shot: 利用稳定器跟随主体移动，画面平滑流畅，仿佛漂浮在环境中，带来强烈的临场沉浸感。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "极速甩镜头",
+        "en_title": "Whip Pan",
+        "video_src": "videos/klingO1/720p/KlingO1_Whip_Pan.mp4",
+        "prompt": "Whip Pan shot: 镜头快速水平扫向右侧，产生强烈的动态模糊，常用于场景的快速无缝转场与节奏切换。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "翻滚运镜",
+        "en_title": "Camera Roll",
+        "video_src": "videos/klingO1/720p/KlingO1_Camera_Roll.mp4",
+        "prompt": "Camera Roll shot: 镜头沿光轴顺时针旋转，打破水平平衡，创造出眩晕、迷失与不安的艺术效果，极具张力。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "俯冲运镜",
+        "en_title": "Drone Dive",
+        "video_src": "videos/klingO1/720p/KlingO1_Drone_Dive.mp4",
+        "prompt": "Drone Dive shot: 无人机从高空急速俯冲下降，模拟高空坠落感，带来惊险刺激的视觉体验和心理压迫感。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "环绕升降",
+        "en_title": "Orbiting Crane",
+        "video_src": "videos/klingO1/720p/KlingO1_Orbiting_Crane.mp4",
+        "prompt": "Orbiting Crane shot: 镜头在垂直升降的同时围绕主体旋转，360度全方位展示人物与环境的关系，营造史诗感。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "希区柯克+翻滚",
+        "en_title": "Dolly Zoom & Roll",
+        "video_src": "videos/klingO1/720p/KlingO1_Dolly_Zoom_and_Roll.mp4",
+        "prompt": "Dolly Zoom & Roll shot: 结合推拉变焦与旋转，极度扭曲空间透视，营造强烈的心理压迫、迷幻与恐惧感。",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
     }
 ]
