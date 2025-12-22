@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 视频运镜合集 (动态渲染版)</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: #0F0F11;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #3B82F6;
+            margin-bottom: 40px;
+        }
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .video-card {
+            background-color: #1A1A1C;
+            border: 1px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            width: fit-content;
+            max-width: 200px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+        .video-card:hover {
+            border-color: #3B82F6;
+        }
+        .video-wrapper {
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            height: auto;
+            width: 100%;
+            display: block;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        .info-section {
+            padding: 15px;
+            background-color: #151517;
+        }
+        .title-zh {
+            font-size: 16px;
+            font-weight: normal;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .title-en {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        .prompt-box {
+            font-size: 13px;
+            color: #BBBBBB;
+            line-height: 1.4;
+            border-top: 1px solid #2A2A2E;
+            padding-top: 10px;
+        }
+        .prompt-label {
+            color: #3B82F6;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+    
+        .meta-info {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .badge {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .badge-model {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .badge-res { background-color: #10B981; color: white; }
+        .badge-duration {
+            background-color: #4B5563;
+            color: #D1D5DB;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="mainTitle">KlingO1 运镜合集</h1>
+    <div class="video-grid" id="videoGrid">
+        <!-- 视频卡片将由 JS 渲染 -->
+    </div>
+
+    <script>
+        // 视频数据 JSON 段
+        const videoData = [
+    {
+        "zh_title": "缓慢推镜头",
+        "en_title": "Slow Zoom In",
+        "video_src": "videos/klingO1/720p/KlingO1_Slow_Zoom_In.mp4",
+        "prompt": "Slow zoom in video with cinematic lighting emphasizing emotional changes and tension.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "急速推镜头",
+        "en_title": "Fast Zoom In",
+        "video_src": "videos/klingO1/720p/KlingO1_Fast_Zoom_In.mp4",
+        "prompt": "Fast zoom in video with intense atmosphere creating sudden shock and drama.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "缓慢拉镜头",
+        "en_title": "Slow Zoom Out",
+        "video_src": "videos/klingO1/720p/KlingO1_Slow_Zoom_Out.mp4",
+        "prompt": "Slow zoom out video revealing surrounding environment and landscape.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向左摇镜头",
+        "en_title": "Pan Left",
+        "video_src": "videos/klingO1/720p/KlingO1_Pan_Left.mp4",
+        "prompt": "Pan left video with continuous shot following objects or showing panoramic landscape.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向右摇镜头",
+        "en_title": "Pan Right",
+        "video_src": "videos/klingO1/720p/KlingO1_Pan_Right.mp4",
+        "prompt": "Pan right video following subject and transitioning between scenes.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向上摇镜头",
+        "en_title": "Tilt Up",
+        "video_src": "videos/klingO1/720p/KlingO1_Tilt_Up.mp4",
+        "prompt": "Tilt up video revealing height of buildings and structures.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向下摇镜头",
+        "en_title": "Tilt Down",
+        "video_src": "videos/klingO1/720p/KlingO1_Tilt_Down.mp4",
+        "prompt": "Tilt down video transitioning from sky to ground level.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向左移镜头",
+        "en_title": "Truck Left",
+        "video_src": "videos/klingO1/720p/KlingO1_Truck_Left.mp4",
+        "prompt": "Truck left video with parallax effect following character parallel motion.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向右移镜头",
+        "en_title": "Truck Right",
+        "video_src": "videos/klingO1/720p/KlingO1_Truck_Right.mp4",
+        "prompt": "Truck right video showing aligned objects with smooth lateral motion.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向上升镜头",
+        "en_title": "Pedestal Up",
+        "video_src": "videos/klingO1/720p/KlingO1_Pedestal_Up.mp4",
+        "prompt": "Pedestal up video with camera moving vertically upward showing full object view.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向下降镜头",
+        "en_title": "Pedestal Down",
+        "video_src": "videos/klingO1/720p/KlingO1_Pedestal_Down.mp4",
+        "prompt": "Pedestal down video with camera moving vertically downward creating landing sensation.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "固定镜头",
+        "en_title": "Static Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_Static_Shot.mp4",
+        "prompt": "Static shot video with fixed camera and subtle background movement.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "希区柯克变焦",
+        "en_title": "Dolly Zoom",
+        "video_src": "videos/klingO1/720p/KlingO1_Dolly_Zoom.mp4",
+        "prompt": "Dolly zoom video with vertigo effect and background warping creating disorientation.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "环绕运镜",
+        "en_title": "Arc Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_Arc_Shot.mp4",
+        "prompt": "Arc shot video with 360-degree circular camera movement around character.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "跟随运镜",
+        "en_title": "Tracking Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_Tracking_Shot.mp4",
+        "prompt": "Tracking shot video following character from behind with immersive perspective.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "摇臂运镜",
+        "en_title": "Crane Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_Crane_Shot.mp4",
+        "prompt": "Crane shot video with sweeping mechanical arm movement over city landscape.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "手持运镜",
+        "en_title": "Handheld",
+        "video_src": "videos/klingO1/720p/KlingO1_Handheld.mp4",
+        "prompt": "Handheld camera video with shaky documentary feel and natural movement.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "甩镜头",
+        "en_title": "Whip Pan",
+        "video_src": "videos/klingO1/720p/KlingO1_Whip_Pan.mp4",
+        "prompt": "Whip pan video with fast rotation and motion blur creating dramatic transition.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "俯冲运镜",
+        "en_title": "Nosedive",
+        "video_src": "videos/klingO1/720p/KlingO1_Nosedive.mp4",
+        "prompt": "Nosedive video with fast camera plunge from sky to ground level.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "低空飞行",
+        "en_title": "Low Flyover",
+        "video_src": "videos/klingO1/720p/KlingO1_Low_Flyover.mp4",
+        "prompt": "Low flyover video with fast speed hugging ground level through street scene.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "子弹时间",
+        "en_title": "Bullet Time",
+        "video_src": "videos/klingO1/720p/KlingO1_Bullet_Time.mp4",
+        "prompt": "Bullet time video with frozen time effect and camera movement around character.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "穿越运镜",
+        "en_title": "Fly Through",
+        "video_src": "videos/klingO1/720p/KlingO1_Fly_Through.mp4",
+        "prompt": "Fly through video with camera passing through window or opening connecting spaces.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "变焦",
+        "en_title": "Rack Focus",
+        "video_src": "videos/klingO1/720p/KlingO1_Rack_Focus.mp4",
+        "prompt": "Rack focus video with focus shift from foreground to background guiding viewer's eye with cinematic transitions.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "浅景深",
+        "en_title": "Shallow Depth",
+        "video_src": "videos/klingO1/720p/KlingO1_Shallow_Depth.mp4",
+        "prompt": "Shallow depth of field video with blurry background and dreamy bokeh light effects highlighting main subject.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "延时摄影",
+        "en_title": "Time-lapse",
+        "video_src": "videos/klingO1/720p/KlingO1_Time_lapse.mp4",
+        "prompt": "Time-lapse video with fast clouds and day to night transition showing rapid passage of time.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "超慢动作",
+        "en_title": "Super Slow Mo",
+        "video_src": "videos/klingO1/720p/KlingO1_Super_Slow_Mo.mp4",
+        "prompt": "Super slow motion video with high frame rate emphasizing movement details of LEGO Batman.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "倒放",
+        "en_title": "Reverse Motion",
+        "video_src": "videos/klingO1/720p/KlingO1_Reverse_Motion.mp4",
+        "prompt": "Reverse motion video with time flowing backwards creating surreal impossible effects.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "变形",
+        "en_title": "Morphing",
+        "video_src": "videos/klingO1/720p/KlingO1_Morphing.mp4",
+        "prompt": "Morphing video with smooth transformations and fluid visual effects creating magical atmosphere.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "FPV穿越机",
+        "en_title": "FPV Drone",
+        "video_src": "videos/klingO1/720p/KlingO1_FPV_Drone.mp4",
+        "prompt": "FPV drone video with fast speed and acrobatic flight showing dynamic aerial perspective.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "水下摄影",
+        "en_title": "Underwater",
+        "video_src": "videos/klingO1/720p/KlingO1_Underwater.mp4",
+        "prompt": "Underwater video with light rays through water and bubbles creating mysterious atmosphere.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "故障艺术",
+        "en_title": "Glitch Art",
+        "video_src": "videos/klingO1/720p/KlingO1_Glitch_Art.mp4",
+        "prompt": "Glitch art video with digital distortion and datamosh effects creating cyberpunk aesthetic.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "热成像",
+        "en_title": "Thermal Vision",
+        "video_src": "videos/klingO1/720p/KlingO1_Thermal_Vision.mp4",
+        "prompt": "Thermal vision video with thermal imaging colors showing heat signatures and thermal contrast.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "夜视",
+        "en_title": "Night Vision",
+        "video_src": "videos/klingO1/720p/KlingO1_Night_Vision.mp4",
+        "prompt": "Night vision video with green grainy appearance creating tactical surveillance aesthetic.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "监控视角",
+        "en_title": "CCTV View",
+        "video_src": "videos/klingO1/720p/KlingO1_CCTV_View.mp4",
+        "prompt": "CCTV security camera video with high angle overhead view and surveillance aesthetic.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "摇摄",
+        "en_title": "Picturesque Pan",
+        "video_src": "videos/klingO1/720p/KlingO1_Picturesque_Pan.mp4",
+        "prompt": "Picturesque pan video with slow cinematic reveal of majestic landscape creating epic atmosphere.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "跟随视角",
+        "en_title": "Follower",
+        "video_src": "videos/klingO1/720p/KlingO1_Follower.mp4",
+        "prompt": "Follower video following character from behind at medium distance with steady camera movement.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "侧面追踪",
+        "en_title": "Profile Track",
+        "video_src": "videos/klingO1/720p/KlingO1_Profile_Track.mp4",
+        "prompt": "Profile tracking video following character from side with close-up on facial expressions.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "螺旋上升",
+        "en_title": "Spiral Up",
+        "video_src": "videos/klingO1/720p/KlingO1_Spiral_Up.mp4",
+        "prompt": "Spiral up video with spiraling upward camera movement revealing panoramic landscape view.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "穿墙",
+        "en_title": "Wall Through",
+        "video_src": "videos/klingO1/720p/KlingO1_Wall_Through.mp4",
+        "prompt": "Wall through video with camera seamlessly passing through solid barriers creating magical transitions.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "定格动画",
+        "en_title": "Stop Motion",
+        "video_src": "videos/klingO1/720p/KlingO1_Stop_Motion.mp4",
+        "prompt": "Stop motion video with claymation texture and jerky movements creating retro whimsical style.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "第一人称视角",
+        "en_title": "POV Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_POV_Shot.mp4",
+        "prompt": "POV shot video from first person perspective with hands visible showing immersive first-person view of LEGO Batman in daytime Times Square.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "过肩镜头",
+        "en_title": "Over the Shoulder",
+        "video_src": "videos/klingO1/720p/KlingO1_Over_the_Shoulder.mp4",
+        "prompt": "Over the shoulder shot video looking at person and object revealing character relationships in LEGO Times Square.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "上帝视角",
+        "en_title": "Top Down View",
+        "video_src": "videos/klingO1/720p/KlingO1_Top_Down_View.mp4",
+        "prompt": "Top down view video strictly perpendicular showing layout of LEGO Batman in daytime Times Square.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "低角度仰视",
+        "en_title": "Extreme Low Angle",
+        "video_src": "videos/klingO1/720p/KlingO1_Extreme_Low_Angle.mp4",
+        "prompt": "Extreme low angle worm's eye view video looking up emphasizing scale and grandeur of LEGO Batman.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "荷兰式倾斜",
+        "en_title": "Dutch Angle",
+        "video_src": "videos/klingO1/720p/KlingO1_Dutch_Angle.mp4",
+        "prompt": "Dutch angle shot video with tilted frame creating uneasy disorienting atmosphere.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "超广角鱼眼",
+        "en_title": "Ultra Wide / Fish Eye",
+        "video_src": "videos/klingO1/720p/KlingO1_Ultra_Wide_Fish_Eye.mp4",
+        "prompt": "Ultra wide angle lens video with fish eye distortion showing expansive LEGO Times Square scene.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "长焦压缩",
+        "en_title": "Telephoto Lens",
+        "video_src": "videos/klingO1/720p/KlingO1_Telephoto_Lens.mp4",
+        "prompt": "Telephoto lens video with compressed background making distant objects appear closer.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "微距摄影",
+        "en_title": "Macro Photography",
+        "video_src": "videos/klingO1/720p/KlingO1_Macro_Photography.mp4",
+        "prompt": "Macro photography video extreme close up showing intricate LEGO brick textures and details.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "光影剪影",
+        "en_title": "Silhouette Shot",
+        "video_src": "videos/klingO1/720p/KlingO1_Silhouette_Shot.mp4",
+        "prompt": "Silhouette shot video with backlit subject creating dramatic lighting and mystical atmosphere.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "分屏构图",
+        "en_title": "Split Screen",
+        "video_src": "videos/klingO1/720p/KlingO1_Split_Screen.mp4",
+        "prompt": "Split screen video showing two different scenes simultaneously with dual perspective composition.",
+        "model": "KlingO1",
+        "duration": "5s",
+        "resolution": "720p"
+    }
+];
+
+        const videoGrid = document.getElementById('videoGrid');
+        const mainTitle = document.getElementById('mainTitle');
+
+        // 渲染函数
+        function renderVideos(data) {
+            mainTitle.innerText = `KlingO1 运镜合集 (共 ${data.length} 个)`;
+            videoGrid.innerHTML = data.map(item => `
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="${item.video_src}" loop muted playsinline></video>
+                    </div>
+                    <div class="info-section">
+                        <div class="meta-info">
+                            <span class="badge badge-model">${item.model}</span>
+                            <span class="badge badge-duration">${item.duration}</span>
+                            <span class="badge badge-res">${item.resolution}</span>
+                        </div>
+                        <div class="title-zh">${item.zh_title}</div>
+                        <div class="title-en">${item.en_title}</div>
+                        <div class="prompt-box">
+                            <div class="prompt-label"><i class="ri-magic-line"></i> Prompt</div>
+                            <div class="prompt-text">${item.prompt}</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // 绑定播放逻辑
+            document.querySelectorAll('video').forEach(video => {
+                video.addEventListener('mouseenter', () => {
+                    video.play();
+                });
+                video.addEventListener('mouseleave', () => {
+                    video.pause();
+                });
+            });
+        }
+
+        // 执行渲染
+        renderVideos(videoData);
+    </script>
+</body>
+</html>
