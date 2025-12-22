@@ -162,10 +162,10 @@
         "resolution": "720p"
     },
     {
-        "zh_title": "俯冲运镜",
-        "en_title": "Nosedive",
-        "video_src": "videos/klingO1/720p/KlingO1_Nosedive.mp4",
-        "prompt": "Nosedive video with fast camera plunge from sky to ground level.",
+        "zh_title": "极速俯冲",
+        "en_title": "Extreme Nosedive",
+        "video_src": "videos/klingO1/720p/klingO1_Extreme_Nosedive.mp4",
+        "prompt": "Extreme nosedive camera plunge from high altitude diving vertically downward at high speed with dramatic falling sensation.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
@@ -243,10 +243,10 @@
         "resolution": "720p"
     },
     {
-        "zh_title": "变形",
-        "en_title": "Morphing",
-        "video_src": "videos/klingO1/720p/KlingO1_Morphing.mp4",
-        "prompt": "Morphing video with smooth transformations and fluid visual effects creating magical atmosphere.",
+        "zh_title": "液态变形",
+        "en_title": "Liquid Morphing",
+        "video_src": "videos/klingO1/720p/klingO1_Liquid_Morphing.mp4",
+        "prompt": "Dramatic morphing transformation with LEGO Batman melting and flowing like liquid changing shape continuously.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
@@ -279,19 +279,19 @@
         "resolution": "720p"
     },
     {
-        "zh_title": "热成像",
-        "en_title": "Thermal Vision",
-        "video_src": "videos/klingO1/720p/KlingO1_Thermal_Vision.mp4",
-        "prompt": "Thermal vision video with thermal imaging colors showing heat signatures and thermal contrast.",
+        "zh_title": "热成像视觉",
+        "en_title": "Thermal Imaging",
+        "video_src": "videos/klingO1/720p/klingO1_Thermal_Imaging.mp4",
+        "prompt": "Thermal imaging with vivid heat signature colors showing bright orange red yellow heat gradients.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
     },
     {
-        "zh_title": "夜视",
+        "zh_title": "夜视仪模式",
         "en_title": "Night Vision",
-        "video_src": "videos/klingO1/720p/KlingO1_Night_Vision.mp4",
-        "prompt": "Night vision video with green grainy appearance creating tactical surveillance aesthetic.",
+        "video_src": "videos/klingO1/720p/klingO1_Night_Vision.mp4",
+        "prompt": "Night vision with intense green monochrome appearance heavy grain and glowing green tones.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
@@ -342,10 +342,10 @@
         "resolution": "720p"
     },
     {
-        "zh_title": "穿墙",
-        "en_title": "Wall Through",
-        "video_src": "videos/klingO1/720p/KlingO1_Wall_Through.mp4",
-        "prompt": "Wall through video with camera seamlessly passing through solid barriers creating magical transitions.",
+        "zh_title": "穿墙运镜",
+        "en_title": "Wall Penetration",
+        "video_src": "videos/klingO1/720p/klingO1_Wall_Penetration.mp4",
+        "prompt": "Camera magically phases through solid wall barrier transitioning from exterior to interior space.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
@@ -361,18 +361,18 @@
     },
     {
         "zh_title": "第一人称视角",
-        "en_title": "POV Shot",
-        "video_src": "videos/klingO1/720p/KlingO1_POV_Shot.mp4",
-        "prompt": "POV shot video from first person perspective with hands visible showing immersive first-person view of LEGO Batman in daytime Times Square.",
+        "en_title": "First Person POV",
+        "video_src": "videos/klingO1/720p/klingO1_First_Person_POV.mp4",
+        "prompt": "First person POV shot with visible LEGO hands and arms clearly visible in bottom of frame.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
     },
     {
         "zh_title": "过肩镜头",
-        "en_title": "Over the Shoulder",
-        "video_src": "videos/klingO1/720p/KlingO1_Over_the_Shoulder.mp4",
-        "prompt": "Over the shoulder shot video looking at person and object revealing character relationships in LEGO Times Square.",
+        "en_title": "Over The Shoulder",
+        "video_src": "videos/klingO1/720p/klingO1_Over_The_Shoulder.mp4",
+        "prompt": "Over the shoulder shot with prominent shoulder and back occupying significant foreground space.",
         "model": "KlingO1",
         "duration": "5s",
         "resolution": "720p"
