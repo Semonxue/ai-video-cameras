@@ -1,0 +1,524 @@
+[
+    {
+        "zh_title": "缓慢推镜头",
+        "en_title": "Slow Zoom In",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Slow_Zoom_In.mp4",
+        "prompt": "Slow Zoom In, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "急速推镜头",
+        "en_title": "Fast Zoom In",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Fast_Zoom_In.mp4",
+        "prompt": "Fast Zoom In, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "缓慢拉镜头",
+        "en_title": "Slow Zoom Out",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Slow_Zoom_Out.mp4",
+        "prompt": "Slow Zoom Out, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向左摇镜头",
+        "en_title": "Pan Left",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Pan_Left.mp4",
+        "prompt": "Pan Left, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向右摇镜头",
+        "en_title": "Pan Right",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Pan_Right.mp4",
+        "prompt": "Pan Right, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向上摇镜头",
+        "en_title": "Tilt Up",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Tilt_Up.mp4",
+        "prompt": "Tilt Up, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向下摇镜头",
+        "en_title": "Tilt Down",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Tilt_Down.mp4",
+        "prompt": "Tilt Down, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向左移镜头",
+        "en_title": "Truck Left",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Truck_Left.mp4",
+        "prompt": "Truck Left, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向右移镜头",
+        "en_title": "Truck Right",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Truck_Right.mp4",
+        "prompt": "Truck Right, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向上升镜头",
+        "en_title": "Pedestal Up",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Pedestal_Up.mp4",
+        "prompt": "Pedestal Up, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "向下降镜头",
+        "en_title": "Pedestal Down",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Pedestal_Down.mp4",
+        "prompt": "Pedestal Down, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "固定镜头",
+        "en_title": "Static Shot",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Static_Shot.mp4",
+        "prompt": "Static Shot, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "希区柯克变焦",
+        "en_title": "Dolly Zoom",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Dolly_Zoom.mp4",
+        "prompt": "Dolly Zoom, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "环绕运镜",
+        "en_title": "Arc Shot",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Arc_Shot.mp4",
+        "prompt": "Arc Shot, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "跟随运镜",
+        "en_title": "Tracking Shot",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Tracking_Shot.mp4",
+        "prompt": "Tracking Shot, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "摇臂运镜",
+        "en_title": "Crane Shot",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Crane_Shot.mp4",
+        "prompt": "Crane Shot, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "手持运镜",
+        "en_title": "Handheld",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Handheld.mp4",
+        "prompt": "Handheld, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "甩镜头",
+        "en_title": "Whip Pan",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Whip_Pan.mp4",
+        "prompt": "Whip Pan, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "极速俯冲",
+        "en_title": "Extreme Nosedive",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Extreme_Nosedive.mp4",
+        "prompt": "Extreme Nosedive, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "低空飞行",
+        "en_title": "Low Flyover",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Low_Flyover.mp4",
+        "prompt": "Low Flyover, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "子弹时间",
+        "en_title": "Bullet Time",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Bullet_Time.mp4",
+        "prompt": "Bullet Time, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "穿越运镜",
+        "en_title": "Fly Through",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Fly_Through.mp4",
+        "prompt": "Fly Through, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "变焦",
+        "en_title": "Rack Focus",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Rack_Focus.mp4",
+        "prompt": "Rack Focus, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "浅景深",
+        "en_title": "Shallow Depth",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Shallow_Depth.mp4",
+        "prompt": "Shallow Depth, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "延时摄影",
+        "en_title": "Time-lapse",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Time-lapse.mp4",
+        "prompt": "Time-lapse, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "超慢动作",
+        "en_title": "Super Slow Mo",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Super_Slow_Mo.mp4",
+        "prompt": "Super Slow Mo, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "倒放",
+        "en_title": "Reverse Motion",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Reverse_Motion.mp4",
+        "prompt": "Reverse Motion, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "液态变形",
+        "en_title": "Liquid Morphing",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Liquid_Morphing.mp4",
+        "prompt": "Liquid Morphing, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "FPV穿越机",
+        "en_title": "FPV Drone",
+        "video_src": "videos/wan2.6/720p/Wan2.6_FPV_Drone.mp4",
+        "prompt": "FPV Drone, Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "水下摄影",
+        "en_title": "Underwater",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Underwater.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "故障艺术",
+        "en_title": "Glitch Art",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Glitch_Art.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "热成像视觉",
+        "en_title": "Thermal Imaging",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Thermal_Imaging.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "夜视仪模式",
+        "en_title": "Night Vision",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Night_Vision.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "监控视角",
+        "en_title": "CCTV View",
+        "video_src": "videos/wan2.6/720p/Wan2.6_CCTV_View.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "摇摄",
+        "en_title": "Picturesque Pan",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Picturesque_Pan.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "跟随视角",
+        "en_title": "Follower",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Follower.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "侧面追踪",
+        "en_title": "Profile Track",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Profile_Track.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "螺旋上升",
+        "en_title": "Spiral Up",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Spiral_Up.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "穿墙运镜",
+        "en_title": "Wall Penetration",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Wall_Penetration.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "定格动画",
+        "en_title": "Stop Motion",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Stop_Motion.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "第一人称视角",
+        "en_title": "First Person POV",
+        "video_src": "videos/wan2.6/720p/Wan2.6_First_Person_POV.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "过肩镜头",
+        "en_title": "Over The Shoulder",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Over_The_Shoulder.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "上帝视角",
+        "en_title": "Top Down View",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Top_Down_View.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "低角度仰视",
+        "en_title": "Extreme Low Angle",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Extreme_Low_Angle.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "荷兰式倾斜",
+        "en_title": "Dutch Angle",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Dutch_Angle.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "超广角鱼眼",
+        "en_title": "Ultra Wide / Fish Eye",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Ultra_Wide__Fish_Eye.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "长焦压缩",
+        "en_title": "Telephoto Lens",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Telephoto_Lens.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "微距摄影",
+        "en_title": "Macro Photography",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Macro_Photography.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "光影剪影",
+        "en_title": "Silhouette Shot",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Silhouette_Shot.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "分屏构图",
+        "en_title": "Split Screen",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Split_Screen.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "升降运镜",
+        "en_title": "Crane Shot",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Crane_Shot.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "推镜头",
+        "en_title": "Dolly In",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Dolly_In.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "斯坦尼康跟拍",
+        "en_title": "Steadicam Tracking",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Steadicam_Tracking.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "极速甩镜头",
+        "en_title": "Whip Pan",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Whip_Pan.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "翻滚运镜",
+        "en_title": "Camera Roll",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Camera_Roll.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "俯冲运镜",
+        "en_title": "Drone Dive",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Drone_Dive.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "环绕升降",
+        "en_title": "Orbiting Crane",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Orbiting_Crane.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    },
+    {
+        "zh_title": "希区柯克+翻滚",
+        "en_title": "Dolly Zoom & Roll",
+        "video_src": "videos/wan2.6/720p/Wan2.6_Dolly_Zoom__Roll.mp4",
+        "prompt": "Lego style heroic character standing in Times Square daytime",
+        "model": "Wan 2.6",
+        "duration": "5s",
+        "resolution": "720p"
+    }
+]
