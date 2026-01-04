@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KlingO1 运镜合集</title>
+    <title>Wan 2.6 运镜合集</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
     <style>
         body {
@@ -174,11 +173,11 @@
         </a>
     </div>
     <div class="content-wrapper">
-        <h1 id="mainTitle">KlingO1 运镜合集</h1>
+        <h1 id="mainTitle">Wan 2.6 运镜合集</h1>
         
         <div class="tabs">
-            <a href="index.html" class="tab-btn active">KlingO1</a>
-            <a href="wan2.6.html" class="tab-btn">Wan 2.6</a>
+            <a href="index.html" class="tab-btn">KlingO1</a>
+            <a href="wan2.6.html" class="tab-btn active">Wan 2.6</a>
         </div>
 
         <div class="video-grid" id="videoGrid">
@@ -192,7 +191,7 @@
 
         // 渲染函数
         function renderVideos(data) {
-            mainTitle.innerText = `KlingO1 运镜合集 (共 ${data.length} 个)`;
+            mainTitle.innerText = `Wan 2.6 运镜合集 (共 ${data.length} 个)`;
             videoGrid.innerHTML = data.map(item => {
                 const thumbSrc = item.video_src
                     .replace('/720p/', '/thumbnails/')
@@ -241,7 +240,7 @@
         }
 
         // 执行渲染
-        fetch('videos/klingO1/videos.json')
+        fetch('videos/wan2.6/videos.json')
             .then(response => response.json())
             .then(data => renderVideos(data))
             .catch(error => console.error('Error loading video data:', error));
